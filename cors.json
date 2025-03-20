@@ -1,0 +1,7 @@
+[
+  {
+    "origin": ["https://tiagodevx.github.io/BattleBeauty/"],
+    "method": ["GET"],
+    "maxAgeSeconds": 3600
+  }
+]
