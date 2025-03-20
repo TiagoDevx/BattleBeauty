@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Battle - Meu Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-content">
+    <header class="header">
+      <h1 class="logo">Beauty Battle</h1>
+      <div class="header-actions">
+        <button onclick="goToHome()" class="back-btn" title="Voltar">🏠</button>
+        <button onclick="signOut()" class="logout-btn">Sair</button>
+      </div>
+    </header>
+    <section class="profile-section">
+      <h2>Meu Perfil</h2>
+      <div class="profile-info">
+        <img id="profile-photo" class="profile-img" src="" alt="Sua foto" style="display: none;">
+        <p><strong>Nome:</strong> <span id="profile-name">Carregando...</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">Carregando...</span></p>
+        <p><strong>Idade:</strong> <span id="profile-age">Carregando...</span></p>
+        <p><strong>Sexo:</strong> <span id="profile-gender">Carregando...</span></p>
+      </div>
+      <div class="profile-actions">
+        <button onclick="toggleEditForm()" class="btn secondary-btn">Alterar Dados</button>
+        <button onclick="resetPassword()" class="btn secondary-btn">Redefinir Senha</button>
+      </div>
+      <!-- Formulário de edição (escondido por padrão) -->
+      <div id="edit-form" class="edit-form" style="display: none;">
+        <h3>Editar Perfil</h3>
+        <div class="input-group">
+          <input type="text" id="edit-name" placeholder="Novo Nome">
+          <input type="number" id="edit-age" placeholder="Nova Idade">
+          <select id="edit-gender">
+            <option value="" disabled selected>Novo Sexo</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+          <input type="file" id="edit-photo" accept="image/*" class="file-input">
+          <label for="edit-photo" class="upload-label">Nova Foto (opcional)</label>
+        </div>
+        <button onclick="saveChanges()" class="btn primary-btn">Salvar Alterações</button>
+        <p id="edit-message" class="message"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

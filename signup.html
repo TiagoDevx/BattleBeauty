@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Battle - Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="auth-container" class="container">
+    <div class="auth-box">
+      <h1 class="logo">Beauty Battle</h1>
+      <p class="subtitle">Crie sua conta e entre na competição!</p>
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="age" placeholder="Idade" required>
+        <select id="gender" required>
+          <option value="" disabled selected>Sexo</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+        <input type="password" id="password" placeholder="Senha" required>
+        <input type="file" id="photo" accept="image/*" class="file-input">
+        <label for="photo" class="upload-label">Escolher Foto (opcional)</label>
+      </div>
+      <button onclick="signUp()" class="btn primary-btn">Cadastrar</button>
+      <p id="auth-message" class="message"></p>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Battle - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-content">
+    <header class="header">
+      <h1 class="logo">Beauty Battle</h1>
+      <div class="header-actions">
+        <button onclick="goToProfile()" class="profile-btn" title="Meu Perfil">
+          <span class="profile-icon">👤</span>
+        </button>
+        <button onclick="signOut()" class="logout-btn">Sair</button>
+      </div>
+    </header>
+    <section class="welcome-section">
+      <h2>Bem-vindo(a) ao Beauty Battle!</h2>
+      <p>Aqui você vai competir pra ser o mais bonito(a). Em breve, suas batalhas começarão!</p>
+    </section>
+  </div>
+
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
